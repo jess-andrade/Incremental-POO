@@ -1,5 +1,6 @@
 package Classes;
 
+import java.util.ArrayList;
 import java.util.Date;
 /*
 
@@ -15,6 +16,7 @@ public class Motorista extends Pessoa {
     private String numCnh, catCnh;
     private int tipo; //servidor = 0 terceirizado = 1
     private String numContrato; // so para o motorista tipo 1 
+    private ArrayList<Contrato> contratos;
 
 // Construtor :: com nome social 
   public Motorista(String nomeCivil, String nomeSocial, String cpf_cnpj, String nomePai, String nomeMae, String naturalidade, Date dataNascimento, String rua, String complemento, String bairro, String telefone, int numeroCasa, String numCnh, String catCnh, int tipo, String numContrato) {
@@ -24,6 +26,7 @@ public class Motorista extends Pessoa {
     this.catCnh = catCnh;
     this.tipo = tipo;
     this.numContrato = numContrato;
+    this.contratos = new ArrayList<Contrato>();
   }
 
 // Construtor :: sem nome social 

@@ -1,5 +1,7 @@
 package Classes;
 
+import java.util.ArrayList;
+
 /*
 
 > Na classe VEICULO, escreva um método que verifique se o veículo é próprio ou alugado.
@@ -13,6 +15,7 @@ public class Veiculo{
     private String placa, modelo;
     private int ano, capacidade, tipo; //próprio tipo=0 ou alugado tipo=1
     private int numContrato; //apenas veiculo alugado
+    private Contrato contrato;
 
 // Construtor :: veiculo proprio tipo=0
 public Veiculo(String placa, String modelo, int ano, int capacidade, int tipo){
@@ -80,7 +83,7 @@ public Veiculo(String placa, String modelo, int ano, int capacidade, int tipo, i
 
   public boolean isProprio(){
     // Verifica se o motorista é servidor ou terceirizado
-
+    
     return (this.tipo == 0); //se for proprio retorna true 
   }
 
